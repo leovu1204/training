@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="그룹_173" data-name="그룹 173" transform="translate(1843 749) rotate(180)">
+    <g id="사각형_108" data-name="사각형 108" transform="translate(1811 717)" fill="#ebebeb" stroke="#ccc" stroke-width="1">
+      <rect width="32" height="32" stroke="none"/>
+      <rect x="0.5" y="0.5" width="31" height="31" fill="none"/>
+    </g>
+    <path id="Icon_ionic-ios-arrow-forward" data-name="Icon ionic-ios-arrow-forward" d="M16.835,13.194,11.54,7.9a1,1,0,0,1,0-1.413,1.008,1.008,0,0,1,1.416,0l6,6a1,1,0,0,1,.029,1.38L12.961,19.9a1,1,0,0,1-1.416-1.413Z" transform="translate(1808.754 719.804)"/>
+    <path id="Icon_ionic-ios-arrow-forward-2" data-name="Icon ionic-ios-arrow-forward" d="M16.835,13.194,11.54,7.9a1,1,0,0,1,0-1.413,1.008,1.008,0,0,1,1.416,0l6,6a1,1,0,0,1,.029,1.38L12.961,19.9a1,1,0,0,1-1.416-1.413Z" transform="translate(1814.754 719.804)"/>
+  </g>
+</svg>

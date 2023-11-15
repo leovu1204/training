@@ -1,0 +1,363 @@
+@import '../../common/sass/variables.scss';
+
+.facility-view {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    margin-top: 100px;
+  }
+
+  &__image {
+    position: relative;
+    display: flex;
+    z-index: -1;
+    height: 18.75rem;
+    justify-content: center;
+    overflow: hidden;
+
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #00000066;
+      z-index: 1;
+    }
+
+    img {
+      max-width: none;
+    }
+
+    &__icon {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 2;
+      animation: slideUp 1s forwards;
+      width: 100%;
+
+      p {
+        margin-left: 30px;
+        margin-right: 30px;
+        font-size: 20px;
+        font-weight: 500;
+        text-shadow: 2px 2px 4px #00000033;
+        letter-spacing: -0.6px;
+        color: $color-white;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 3.75rem;
+    padding-bottom: 7.5rem;
+    padding-left: 17.7vw;
+    padding-right: 17.7vw;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__table-head {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    margin-bottom: 2.5rem;
+  }
+
+  &__search-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__search-area {
+    display: flex;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+  }
+
+  &__map-area {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      cursor: pointer;
+      width: 8em;
+      height: 40px;
+      background-color: white;
+      color: #0069c3;
+      border: 1px solid #006ac3;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: bold;
+
+      &:hover {
+        background-color: #b7dcff;
+      }
+    }
+
+    .button.selected {
+      background: linear-gradient(to right, #0066c1 25%, #009fe5);
+      color: white;
+    }
+
+    .my-map {
+      width: 450px;
+      height: 450px;
+
+      .animation-g {
+        cursor: pointer;
+      }
+
+      .animation-g:hover path {
+        transition: fill 0.8s;
+        fill: #b7dcff;
+      }
+
+      .animation-g.selected path {
+        transform: translate(3 3);
+        fill: url(#linear-gradient-2);
+      }
+
+      .animation-g.selected text {
+        fill: white;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__map-dropdown {
+    display: none;
+    margin-bottom: 1.25rem;
+  }
+
+  &__scroll {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      font-weight: bold;
+
+      span {
+        color: #0066c1;
+      }
+    }
+
+    .item-list {
+      border: 1px solid #d9d9d9;
+      margin-top: 15px;
+      min-height: 35rem;
+      max-height: 35rem;
+      width: 27.375rem;
+      overflow-y: auto;
+
+      p {
+        margin: 0.875rem;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1.25rem;
+        padding-top: 0.688rem;
+        padding-bottom: 0.5rem;
+        position: relative;
+
+        &:hover {
+          cursor: pointer;
+          background-color: #e6f3ff;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          height: 1px;
+          width: 90%;
+          background-color: #cccccc;
+        }
+
+        .item-title {
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        .item-content {
+          display: flex;
+          margin-top: 0.625rem;
+
+          img {
+            width: 9.375rem;
+            height: 6.25rem;
+            object-fit: cover;
+          }
+
+          .item-data {
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            gap: 0.375rem;
+
+            li {
+              display: flex;
+              align-items: center;
+
+              .icon-span {
+                display: inline-block;
+                background-color: #0066c1;
+                width: 6px;
+                height: 6px;
+
+                margin-left: 1.25rem;
+                margin-right: 0.375rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #d9d9d9;
+      border-radius: 6px;
+    }
+  }
+}
+
+.facility-table {
+  text-align: center;
+  thead {
+    tr {
+      background-color: #d4e9fc;
+
+      th:first-child {
+        width: 10%;
+      }
+
+      th:nth-child(2),
+      th:nth-child(3),
+      th:nth-child(4),
+      th:nth-child(5),
+      th:nth-child(6) {
+        width: 18%;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td:first-child {
+        width: 10%;
+      }
+      td:nth-child(2),
+      td:nth-child(3),
+      td:nth-child(4),
+      td:nth-child(5),
+      td:nth-child(6) {
+        width: 18%;
+      }
+
+      td:nth-child(2) {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.facility-view__title {
+  display: flex;
+}
+
+@media only screen and (max-width: $breakpoint-xl) {
+  .facility-view {
+    &__table-head {
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    &__body {
+      flex-direction: column;
+    }
+
+    &__map-area {
+      button {
+        display: none;
+      }
+
+      .my-map {
+        width: 40.625rem;
+        height: 40.625rem;
+      }
+    }
+
+    &__map-dropdown {
+      display: flex;
+    }
+
+    &__scroll {
+      p {
+        display: none;
+      }
+
+      .item-list {
+        width: 40.625rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  .facility-view {
+    &__body {
+      flex-direction: column;
+    }
+
+    &__map-area {
+      .my-map {
+        width: 21.875rem;
+        height: 21.875rem;
+      }
+    }
+
+    &__scroll {
+      .item-list {
+        width: 21.875rem;
+
+        .item {
+          .item-content {
+            .item-data {
+              .item-status {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__content {
+      padding-left: 1.875rem;
+      padding-right: 1.875rem;
+    }
+  }
+}

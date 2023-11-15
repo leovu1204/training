@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44.186" height="44.102" viewBox="0 0 44.186 44.102">
+  <defs>
+    <filter id="map" x="0" y="0.78" width="44.186" height="43.322" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="icon-시설현황" transform="translate(-8282.907 15963)">
+    <rect id="사각형_2076" data-name="사각형 2076" width="40" height="40" transform="translate(8283 -15963)" fill="#ff4e4e" opacity="0"/>
+    <g transform="matrix(1, 0, 0, 1, 8282.91, -15963)" filter="url(#map)">
+      <path id="map-2" data-name="map" d="M33.162,43.429a2.3,2.3,0,0,0-1.162,2v21.32a2.3,2.3,0,0,0,3.377,2.038c.031-.017.061-.034.091-.053l6.045-3.955a.575.575,0,0,0,.261-.483V38.623a.575.575,0,0,0-.9-.476Zm11.8-5.319a.575.575,0,0,0-.888.481V64.279a.575.575,0,0,0,.261.483l6.9,4.484a.575.575,0,0,0,.889-.481V43.093a.575.575,0,0,0-.262-.484Zm18.117.514a2.273,2.273,0,0,0-2.263-.063.868.868,0,0,0-.09.053l-6.046,3.951a.575.575,0,0,0-.261.483V68.73a.575.575,0,0,0,.9.476l7.692-5.278a2.3,2.3,0,0,0,1.179-2.012V40.651A2.354,2.354,0,0,0,63.074,38.625Z" transform="translate(-28 -33.24)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

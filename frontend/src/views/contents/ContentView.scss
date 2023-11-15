@@ -1,0 +1,216 @@
+@import '../../common/sass/variables.scss';
+
+.content-view {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    margin-top: 100px;
+  }
+
+  &__image {
+    position: relative;
+    display: flex;
+    z-index: -1;
+    height: 18.75rem;
+    justify-content: center;
+    overflow: hidden;
+
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #00000066;
+      z-index: 1;
+    }
+
+    img {
+      max-width: none;
+    }
+
+    &__icon {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 2;
+      animation: slideUp 1s forwards;
+      width: 100%;
+
+      p {
+        margin-left: 30px;
+        margin-right: 30px;
+        font-size: 20px;
+        font-weight: 500;
+        text-shadow: 2px 2px 4px #00000033;
+        letter-spacing: -0.6px;
+        color: $color-white;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 3.75rem;
+    padding-bottom: 7.5rem;
+    padding-left: 17.7vw;
+    padding-right: 17.7vw;
+    display: flex;
+    flex-direction: column;
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+
+      .form-create {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+
+        .form-row {
+          display: flex;
+
+          .form-group {
+            display: flex;
+            min-height: 3.125rem;
+            width: 100%;
+
+            label {
+              display: flex;
+              background-color: #d4e9fc;
+              border-right: none;
+              justify-content: center;
+              align-items: center;
+              width: 12.5rem;
+            }
+
+            input {
+              flex: 1;
+              padding-left: 1.25rem;
+              border: 1px solid #e5e7eb;
+              font-size: 20px;
+
+              &::placeholder {
+                color: #b2b2b2;
+                font-size: 16px;
+              }
+            }
+
+            .content-area {
+              border: 1px solid #e5e7eb;
+              resize: none;
+              padding-left: 1.25rem;
+              padding-top: 0.5rem;
+              font-size: 16px;
+              width: 100%;
+              height: 28.75rem;
+
+              outline: none;
+            }
+          }
+        }
+
+        .error {
+          text-align: left;
+          color: red;
+          font-size: 14px;
+        }
+      }
+
+      .form-button {
+        display: flex;
+        align-self: flex-end;
+        gap: 0.625rem;
+
+        .cancel-button,
+        .submit-button {
+          cursor: pointer;
+          height: 2.5rem;
+          width: 5.5rem;
+          border: 1px solid #c0c0c0;
+          font-weight: bold;
+        }
+
+        .cancel-button {
+          background-color: #d9d9d9;
+        }
+
+        .submit-button {
+          background: linear-gradient(90deg, #0367c2 0%, #009fe5 100%);
+          color: white;
+        }
+      }
+    }
+  }
+
+  &__table-head {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    margin-bottom: 2.5rem;
+  }
+
+  &__search-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__search-area {
+    display: flex;
+  }
+}
+
+.content-view__title {
+  display: flex;
+}
+
+@media only screen and (max-width: $breakpoint-xl) {
+  .content-view {
+    &__table-head {
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    &__search-container {
+      justify-content: normal;
+    }
+  }
+
+  .form-group {
+    input {
+      width: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  .content-view {
+    &__table-head {
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    &__search-container {
+      flex-direction: column;
+      justify-content: normal;
+    }
+
+    &__content {
+      padding-left: 1.875rem;
+      padding-right: 1.875rem;
+    }
+  }
+
+  .form-group {
+    label {
+      max-width: 6.25rem;
+    }
+  }
+
+  .form-button {
+    margin-top: 1.25rem;
+  }
+}

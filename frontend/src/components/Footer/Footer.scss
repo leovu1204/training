@@ -1,0 +1,57 @@
+@import '../../common/sass/variables';
+@import '../../common/sass/font.scss';
+
+.footer {
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  color: $color-grey;
+  margin-top: auto;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__left {
+    margin-left: 9.25%;
+  }
+
+  &__right {
+    margin-left: 2.5%;
+
+    &__contact {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-left: 0.625rem;
+        margin-right: 0.625rem;
+        width: 1px;
+        background-color: #707070;
+        align-self: stretch;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      font-family: 'Proxima Nova';
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.875rem;
+
+    &__right {
+      margin-left: 7.5%;
+      align-items: flex-start;
+
+      &__contact {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+}

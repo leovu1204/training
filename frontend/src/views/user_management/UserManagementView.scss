@@ -1,0 +1,132 @@
+@import '../../common/sass/variables.scss';
+
+.user-management-view {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    margin-top: 100px;
+  }
+
+  &__content {
+    padding-top: 3.75rem;
+    padding-bottom: 7.5rem;
+    padding-left: 17.7vw;
+    padding-right: 17.7vw;
+  }
+
+  &__table-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 40px;
+    margin-bottom: 2.5rem;
+  }
+
+  &__search-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__search-area {
+    display: flex;
+  }
+}
+
+.user-management-table {
+  thead {
+    tr {
+      background-color: #d4e9fc;
+
+      th:first-child {
+        width: 8%;
+      }
+
+      th:nth-child(2),
+      th:nth-child(3),
+      th:nth-child(4),
+      th:nth-child(6) {
+        width: 14.5%;
+      }
+
+      th:nth-child(5) {
+        width: 21%;
+      }
+
+      th:nth-child(7) {
+        width: 13%;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td:first-child {
+        width: 8%;
+      }
+      td:nth-child(2),
+      td:nth-child(3),
+      td:nth-child(4),
+      td:nth-child(6) {
+        width: 14.5%;
+      }
+
+      td:nth-child(5) {
+        max-width: 21%;
+        overflow-wrap: break-word;
+      }
+
+      td:nth-child(7) {
+        width: 13%;
+      }
+
+      td:nth-child(2) {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.user-management-view__title {
+  display: flex;
+}
+
+@media only screen and (max-width: $breakpoint-xl) {
+  .user-management-view {
+    &__table-head {
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    &__search-container {
+      justify-content: normal;
+    }
+  }
+
+  .user-management-table {
+    margin-top: 5.5rem;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  .user-management-view {
+    &__table-head {
+      flex-direction: column;
+    }
+
+    &__search-container {
+      flex-direction: column;
+    }
+
+    .user-management-table {
+      margin-top: 7.5rem;
+    }
+
+    &__content {
+      padding-left: 1.875rem;
+      padding-right: 1.875rem;
+    }
+  }
+}

@@ -1,13 +1,11 @@
 @import '../../common/sass/variables';
 
 .dropdown {
-  padding: var(--sp-3) 0;
   font-size: 14px;
   background: $color-white;
   width: max-content;
   color: $color-black;
   box-shadow: $drop-shadow;
-  border-radius: 4px;
 
   &-elm {
     cursor: pointer;
@@ -15,9 +13,15 @@
 
   &__item {
     padding: var(--sp-4) var(--sp-6);
+    text-align: center;
 
     &:hover {
-      background-color: $color-grey-l80;
+      background-color: #d4e9fc;
+    }
+
+    &.active {
+      background-color: #2684ff;
+      color: white;
     }
   }
 }

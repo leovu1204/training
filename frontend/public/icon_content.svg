@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="44" viewBox="0 0 44 44">
+  <defs>
+    <filter id="play-circle" x="0" y="0" width="44" height="44" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="icon-콘텐츠" transform="translate(-8336 15963)">
+    <rect id="사각형_2077" data-name="사각형 2077" width="40" height="40" transform="translate(8336 -15963)" fill="#ff4e4e" opacity="0"/>
+    <g transform="matrix(1, 0, 0, 1, 8336, -15963)" filter="url(#play-circle)">
+      <path id="play-circle-2" data-name="play-circle" d="M64,48A16,16,0,1,0,80,64,16.018,16.018,0,0,0,64,48Zm5.752,16.715-8.8,5.318a.829.829,0,0,1-1.255-.716V58.682a.829.829,0,0,1,1.255-.716l8.8,5.318a.838.838,0,0,1,0,1.431Z" transform="translate(-44 -44)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

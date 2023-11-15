@@ -44,3 +44,26 @@ a {
 ul {
   list-style-type: none;
 }
+
+.gradual-color-transition {
+  background: linear-gradient(90deg, #0367c2 0%, #009fe5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes slideUp {
+  from {
+    top: 100%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}

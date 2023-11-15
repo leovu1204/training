@@ -152,6 +152,7 @@ const Table: React.FC<TableProps> = ({
       </div>
       {!total && !pageSize ? null : (
         <div className="custom-table__bottom">
+          {/*
           <span className="custom-table__info">
             {total
               ? t('common.text.tableInfo', {
@@ -159,9 +160,10 @@ const Table: React.FC<TableProps> = ({
                   to: page * pageSize > total ? total : page * pageSize || 1,
                   total,
                   count: total,
-                })
+                })  
               : t('common.text.showEmpty')}
           </span>
+          */}
           <div className="custom-table__pagination">
             <div onClick={() => changePage(PaginateAction.Prev)} className={previousButtonClasses}>
               {t('common.text.previous')}

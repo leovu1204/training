@@ -54,9 +54,7 @@ const Dropdown: React.FunctionComponent<DropdownProps> = ({
   const dropdownClasses = classNames('dropdown', dropdownClassName);
 
   const onClickContent = () => {
-    if (hideOnClickMenu) {
-      setVisible(false);
-    }
+    setVisible(false);
   };
 
   return (

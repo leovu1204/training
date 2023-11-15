@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44.526" height="43.101" viewBox="0 0 44.526 43.101">
+  <defs>
+    <filter id="chatbox-ellipses_1_" x="0" y="0.898" width="44.526" height="42.203" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="icon-자유게시판" transform="translate(-8501.736 15963)">
+    <rect id="사각형_2080" data-name="사각형 2080" width="40" height="40" transform="translate(8502 -15963)" fill="#ff4e4e" opacity="0"/>
+    <g transform="matrix(1, 0, 0, 1, 8501.74, -15963)" filter="url(#chatbox-ellipses_1_)">
+      <path id="chatbox-ellipses_1_2" data-name="chatbox-ellipses (1)" d="M59.3,48H37.227A5.233,5.233,0,0,0,32,53.227v13.94a5.233,5.233,0,0,0,5.227,5.227H38.97v4.647a1.162,1.162,0,0,0,1.906.892l6.642-5.539H59.3a5.233,5.233,0,0,0,5.227-5.227V53.227A5.233,5.233,0,0,0,59.3,48ZM41.293,62.521A2.323,2.323,0,1,1,43.616,60.2,2.323,2.323,0,0,1,41.293,62.521Zm6.97,0A2.323,2.323,0,1,1,50.586,60.2,2.323,2.323,0,0,1,48.263,62.521Zm6.97,0A2.323,2.323,0,1,1,57.556,60.2,2.323,2.323,0,0,1,55.233,62.521Z" transform="translate(-28 -43.1)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

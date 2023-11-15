@@ -1,0 +1,165 @@
+@import '../../common/sass/variables.scss';
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  box-shadow: 0px 6px 18px rgb(0, 0, 0, 0.16);
+  background-color: $color-white;
+
+  .header-left {
+    display: flex;
+    margin-left: 9.25%;
+
+    .header-img {
+      background-image: url('assets/logo_medium.svg');
+      background-repeat: no-repeat;
+      width: 217.293px;
+      height: 40px;
+    }
+
+    .header-img-text {
+      display: flex;
+      margin-left: 1em;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  }
+
+  .default-link {
+    color: $color-black;
+  }
+
+  .active-link {
+    color: #0066c1;
+    font-weight: bold;
+  }
+
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10%;
+  }
+}
+
+.app-header.transparent {
+  background: transparent;
+  box-shadow: none;
+  color: white;
+
+  .active-link,
+  .default-link {
+    color: white;
+  }
+}
+
+.app-header.show-menu {
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: flex-start;
+  position: fixed;
+  z-index: 1;
+  box-shadow: 0px 6px 18px rgb(0, 0, 0, 0.16);
+
+  .menu-container {
+    margin-bottom: 1.875rem;
+    align-self: flex-end;
+    color: white;
+
+    .menu-icon {
+      padding-top: 10px;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+    text-align: right;
+  }
+
+  .default-link {
+    color: black;
+  }
+
+  .active-link {
+    color: #0066c1;
+  }
+}
+
+.app-header.admin {
+  background-color: #155ca2;
+
+  .default-link {
+    color: #a4c6e3;
+  }
+
+  .active-link {
+    color: white;
+  }
+
+  color: white;
+}
+
+.app-header.user {
+  background: linear-gradient(180deg, #008dcc 0%, #008e86 100%);
+
+  .default-link {
+    color: white;
+  }
+
+  color: white;
+}
+
+.hide-links {
+  background: linear-gradient(180deg, #0066c1 0%, #0088e3 100%);
+}
+
+.nav-links {
+  display: flex;
+  gap: 3.125rem;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: $breakpoint-xl) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .app-header {
+    .header-left {
+      .header-img.small-screen {
+        margin-top: 10px;
+        background-image: url('assets/logo_small.svg');
+        background-repeat: no-repeat;
+        width: 148.422px;
+        height: 30px;
+      }
+    }
+  }
+}

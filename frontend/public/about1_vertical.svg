@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="330" height="481" viewBox="0 0 330 481">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#009ce3"/>
+      <stop offset="1" stop-color="#0066c1"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0" y1="1" x2="0.988" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="그룹_717" data-name="그룹 717" transform="translate(-30 -518)">
+    <g id="사각형_1971" data-name="사각형 1971" transform="translate(30 518)" fill="#fff" stroke="#ccc" stroke-width="1">
+      <rect width="330" height="481" stroke="none"/>
+      <rect x="0.5" y="0.5" width="329" height="480" fill="none"/>
+    </g>
+    <g id="그룹_716" data-name="그룹 716" transform="translate(4427 11390)">
+      <g id="그룹_715" data-name="그룹 715" transform="translate(0 361)">
+        <rect id="사각형_2160" data-name="사각형 2160" width="280" height="60" rx="30" transform="translate(-4372 -10842)" fill="url(#linear-gradient)"/>
+        <text id="글로벌_해양도시" data-name="글로벌 해양도시" transform="translate(-4302 -10805)" fill="#fff" font-size="20" font-family="TmoneyRoundWind-ExtraBold, Tmoney RoundWind" font-weight="800"><tspan x="0" y="0">글로벌 해양도시</tspan></text>
+      </g>
+      <rect id="사각형_1964" data-name="사각형 1964" width="165.346" height="75" transform="translate(-4194.5 -10789.482) rotate(90)" fill="#d9f0f9"/>
+      <path id="패스_1237" data-name="패스 1237" d="M846.574,37v75H915.03l24.25-37.5L915.03,37Z" transform="translate(-4157.5 -11426.244) rotate(90)" fill="url(#linear-gradient-2)"/>
+      <rect id="사각형_1965" data-name="사각형 1965" width="10.822" height="75" transform="translate(-4194.5 -10593.492) rotate(90)" fill="#1f92e8"/>
+      <rect id="사각형_1966" data-name="사각형 1966" width="10.822" height="75" transform="translate(-4194.5 -10607.314) rotate(90)" fill="#62bdf4"/>
+      <rect id="사각형_1967" data-name="사각형 1967" width="10.822" height="75" transform="translate(-4194.5 -10621.137) rotate(90)" fill="#b8e0f4"/>
+      <g id="그룹_712" data-name="그룹 712">
+        <g id="사각형_2160-2" data-name="사각형 2160" transform="translate(-4372 -10842)" fill="#fff" stroke="#000" stroke-width="1">
+          <rect width="280" height="60" rx="30" stroke="none"/>
+          <rect x="0.5" y="0.5" width="279" height="59" rx="29.5" fill="none"/>
+        </g>
+        <text id="항만물류" transform="translate(-4271 -10805)" font-size="20" font-family="TmoneyRoundWind-ExtraBold, Tmoney RoundWind" font-weight="800"><tspan x="0" y="0">항만물류</tspan></text>
+      </g>
+      <g id="그룹_713" data-name="그룹 713" transform="translate(0 74)">
+        <g id="사각형_2160-3" data-name="사각형 2160" transform="translate(-4372 -10842)" fill="#fff" stroke="#000" stroke-width="1">
+          <rect width="280" height="60" rx="30" stroke="none"/>
+          <rect x="0.5" y="0.5" width="279" height="59" rx="29.5" fill="none"/>
+        </g>
+        <text id="해양수산" transform="translate(-4271 -10805)" font-size="20" font-family="TmoneyRoundWind-ExtraBold, Tmoney RoundWind" font-weight="800"><tspan x="0" y="0">해양수산</tspan></text>
+      </g>
+      <g id="그룹_714" data-name="그룹 714" transform="translate(0 148)">
+        <g id="사각형_2160-4" data-name="사각형 2160" transform="translate(-4372 -10842)" fill="#fff" stroke="#000" stroke-width="1">
+          <rect width="280" height="60" rx="30" stroke="none"/>
+          <rect x="0.5" y="0.5" width="279" height="59" rx="29.5" fill="none"/>
+        </g>
+        <text id="관광·MICE산업" transform="translate(-4302 -10805)" font-size="20" font-family="TmoneyRoundWind-ExtraBold, Tmoney RoundWind" font-weight="800"><tspan x="0" y="0">관광·MICE산업</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

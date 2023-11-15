@@ -1,0 +1,116 @@
+@import '../../common/sass/variables';
+
+.video-collection {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.video {
+  display: flex;
+  gap: 2rem;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    height: 12.5rem;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+
+      &__title {
+        width: 80%;
+      }
+
+      p {
+        font-size: 14px;
+        color: #555555;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+
+    &__desc {
+      max-width: 700px;
+      height: 100%;
+      margin-top: 0.625rem;
+      background-color: #f9f9f9;
+      display: flex;
+      align-items: center;
+      color: #676767;
+      font-size: 15px;
+      padding: 0 1.5rem;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  gap: 4px;
+
+  .icon-nav {
+    display: flex;
+    gap: 4px;
+
+    .button-nav {
+      cursor: pointer;
+      border: none;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  .page-number {
+    display: flex;
+    gap: 4px;
+
+    button {
+      background-color: white;
+      border: 1px solid #cccccc;
+      width: 2rem;
+      height: 2rem;
+    }
+
+    button.clicked {
+      background: linear-gradient(90deg, #0367c2 0%, #009fe5 100%);
+      color: white;
+    }
+  }
+}
+
+iframe {
+  border: none;
+}
+
+@media only screen and (max-width: $breakpoint-xl) {
+  .video {
+    flex-direction: column;
+  }
+
+  iframe {
+    width: 325px;
+    height: 175px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  .video {
+    flex-direction: column;
+
+    &__info {
+      width: 325px;
+    }
+  }
+
+  iframe {
+    height: 175px;
+  }
+}

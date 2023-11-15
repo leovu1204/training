@@ -4,10 +4,11 @@
   width: 16px;
   height: 16px;
   box-sizing: content-box;
-  fill: $color-ghost-white;
   pointer-events: none;
   transform: scale(1);
+  fill: black;
   flex-shrink: 0;
+  vertical-align: middle;
 
   &--rotate-45 {
     transform: rotate(45deg);
@@ -65,8 +66,8 @@
       height: 28px;
     }
     &--xxl {
-      width: 36px;
-      height: 36px;
+      width: 32px;
+      height: 32px;
     }
   }
 }

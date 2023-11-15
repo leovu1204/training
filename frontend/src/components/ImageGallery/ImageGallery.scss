@@ -1,0 +1,158 @@
+@import '../../common/sass/variables';
+
+$itemsPerRowDesktop: 4;
+$itemsPerRowTablet: 2;
+$itemsPerRowMobile: 1;
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+
+  .grid-row {
+    display: grid;
+    grid-template-columns: repeat(var(--itemsPerRow), 1fr);
+    gap: 2.5rem;
+
+    figure {
+      border: 1px solid #cccccc;
+      width: 13.75rem;
+
+      &:hover {
+        cursor: pointer;
+        border: 1px solid #0066c1;
+        box-shadow: 6px 6px 25px #00000033;
+        transition: 0.3s ease;
+
+        figcaption {
+          border-top: 1px solid #0066c1;
+          background: linear-gradient(90deg, #0367c2 0%, #009fe5 100%);
+          color: white;
+          transition: 0.3s ease;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 13.125rem;
+        object-fit: cover;
+        vertical-align: middle;
+      }
+    }
+
+    figcaption {
+      min-height: 3.75rem;
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid #cccccc;
+      background-color: #d4e9fc;
+      font-size: 15px;
+      color: #000000;
+      justify-content: center;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  gap: 4px;
+
+  .icon-nav {
+    display: flex;
+    gap: 4px;
+
+    .button-nav {
+      cursor: pointer;
+      border: none;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  .page-number {
+    display: flex;
+    gap: 4px;
+
+    button {
+      background-color: white;
+      border: 1px solid #cccccc;
+      width: 2rem;
+      height: 2rem;
+    }
+
+    button.clicked {
+      background: linear-gradient(90deg, #0367c2 0%, #009fe5 100%);
+      color: white;
+    }
+  }
+
+  .admin-buttons {
+    display: flex;
+    gap: 4px;
+    position: absolute;
+    right: 18%;
+
+    button {
+      border: 1px solid #c0c0c0;
+      height: 2.5rem;
+      min-width: 3.75rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__edit {
+      background-color: #ffffff;
+    }
+
+    &__remove {
+      background-color: #d9d9d9;
+    }
+
+    &__create {
+      width: 6.25rem;
+      color: white;
+      background: linear-gradient(90deg, #0367c2 0%, #009fe5 100%);
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-xxl) {
+  :root {
+    --itemsPerRow: #{$itemsPerRowDesktop};
+  }
+}
+
+@media only screen and (max-width: $breakpoint-xl) {
+  :root {
+    --itemsPerRow: #{$itemsPerRowTablet};
+  }
+
+  .gallery-container {
+    margin-top: 2.5rem;
+
+    .grid-row {
+      figure {
+        width: 18.75rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  :root {
+    --itemsPerRow: #{$itemsPerRowMobile};
+  }
+
+  .gallery-container {
+    margin-top: 7rem;
+
+    .grid-row {
+      figure {
+        width: 20.8rem;
+      }
+    }
+  }
+}

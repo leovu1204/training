@@ -1,0 +1,76 @@
+@import '../../common/sass/variables';
+
+.modal-container {
+	display: flex;
+	flex-direction: column;
+
+	h2 {
+		font-size: 20px;
+	}
+
+	.modal-content {
+		display: flex;
+		margin-top: 1.25rem;
+		gap: 1.25rem;
+
+		img {
+			min-width: 15rem;
+			height: 11.375rem;
+			object-fit: cover;
+		}
+
+		.collection-table {
+			max-height: 11.375rem;
+			overflow-y: auto;
+			border: 1px solid #CCCCCC;
+
+			table {
+				tbody {
+					display: block;
+				}
+			
+				thead {
+					tr {
+						background-color: #D4E9FC;
+					}
+				}
+			
+				tr {
+					display: table;
+					width: 100%;
+					table-layout: fixed;
+			
+					th {
+						height: 40px;
+						text-align: center;
+						font-size: 16px;
+						color: #202020;
+					}
+			
+					td {
+						border-left: none;
+						border-right: none;
+						height: 35px;
+						text-align: center;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+		::-webkit-scrollbar {
+			width: 4px;
+		}
+		
+		::-webkit-scrollbar-thumb {
+			background-color: #D9D9D9;
+			border-radius: 6px;
+		}
+	}
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+	.modal-content {
+		flex-direction: column;
+	}
+}
