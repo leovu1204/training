@@ -1,0 +1,95 @@
+@import '../../common/sass/variables';
+@import '../../common/sass/font';
+
+.login-form {
+  margin-top: 10rem;
+  margin-bottom: 3rem;
+  width: 30rem;
+  padding: 1.25rem;
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  align-self: center;
+
+  h2 {
+    font-family: 'Noto Sans KR';
+    text-align: center;
+    margin: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.25em;
+
+    label {
+      display: flex;
+      font-size: var(--font-size-base);
+      margin-bottom: 0.625em;
+      align-items: center;
+      font-family: 'Noto Sans KR';
+      font-weight: normal;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.938rem;
+      border: 1px solid #acacac;
+      font-family: 'Noto Sans KR';
+      font-weight: normal;
+      font-size: var(--font-size-base);
+
+      &::placeholder {
+        color: #acacac;
+      }
+    }
+
+    input[type='checkbox'] {
+      margin-right: 0.625rem;
+      width: 1.875rem;
+      height: 1.875rem;
+      border: 1px solid #363636;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 0.5rem;
+    }
+
+    span {
+      cursor: pointer;
+      margin-left: -2.5rem;
+    }
+  }
+
+  button {
+    height: 3.75rem;
+    margin-top: 5.25rem;
+    margin-bottom: 0.625rem;
+    width: 100%;
+    background: linear-gradient(90deg, #0066c1 0%, #009fe5 100%);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Noto Sans KR';
+    font-weight: 700;
+    font-size: var(--font-size-base);
+  }
+
+  .registration-button {
+    height: 2.5rem;
+    background: #f6f6f6;
+    border: 1px solid #acacac;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-black;
+    font-family: 'Noto Sans KR';
+    font-weight: normal;
+    font-size: var(--font-size-base);
+  }
+}
+
+.toast-message {
+  font-size: 16px;
+}

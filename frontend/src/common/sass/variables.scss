@@ -18,7 +18,7 @@ $color-white-half-spanish: #feefe1;
 
 $color-purple: #7d67de;
 
-$color-black: #002420;
+$color-black: #000000;
 $color-black-l20: #4d4d4d;
 $color-black-l80: #d2d2d2;
 
@@ -102,6 +102,10 @@ $drop-shadow: 1px 2px 6px rgba($color-black, 0.2) !default;
 $shadow-alt: 0 10px 16px 0 rgba(0, 0, 0, 0.18);
 $color-box-shadow: rgb(0 0 0 / 16%);
 
+/* Gradient color */
+$gradient-primary: linear-gradient(90deg, #0367c2 0%, #009fe5 100%);
+$gradient-secondary: linear-gradient(180deg, #008dcc 0%, #008e86 100%);
+
 /* Semantic color */
 $success: #1ac94c;
 $success-secondary: #4a9631;
@@ -122,7 +126,7 @@ $bg-primary: #fbfffe;
 $bg-noti: #eefcf8;
 
 :root {
-  --font-content: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-content: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --max-container-width: 1850px;
   --color-text: #747878;
   /* Spacing */
@@ -143,6 +147,15 @@ $bg-noti: #eefcf8;
   --width-lg: 300px;
   --width-xl: 360px;
   --width-xxl: 400px;
+
+  /* font */
+  --font-size-sm: clamp(0.8rem, -0.02vw + 0.8rem, 0.75rem);
+  --font-size-base: clamp(1rem, 0vw + 1rem, 1rem);
+  --font-size-md: clamp(1.25rem, 0.04vw + 1.24rem, 1.33rem);
+  --font-size-lg: clamp(1.56rem, 0.1vw + 1.55rem, 1.78rem);
+  --font-size-xl: clamp(1.95rem, 0.19vw + 1.92rem, 2.37rem);
+  --font-size-xxl: clamp(2.44rem, 0.32vw + 2.39rem, 3.16rem);
+  --font-size-xxxl: clamp(3.05rem, 0.52vw + 2.96rem, 4.21rem);
 }
 
 $color-ui-bg: #f3f6f8;
@@ -150,9 +163,9 @@ $color-ui-elements: #d8dee4;
 $color-main: #252b40;
 $color-placeholder: #80838d;
 
-$font-family-1: "Calibre";
-$font-family-2: "Gill Sans";
-$font-family-3: "Helvetica";
+$font-family-1: 'Calibre';
+$font-family-2: 'Gill Sans';
+$font-family-3: 'Helvetica';
 
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;

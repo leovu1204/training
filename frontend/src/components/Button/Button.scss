@@ -1,9 +1,10 @@
 @import '../../common/sass/variables';
+@import '../../common/sass/font';
 
 .button {
   $root: &;
   cursor: pointer;
-  height: 50px;
+  height: 3.125rem;
 
   &:focus-visible {
     outline: none;
@@ -24,11 +25,11 @@
       border: 1px solid $color-primary-d15;
     }
 
-    &:focus {
+    /* &:focus {
       box-shadow: $drop-shadow;
       background: $color-primary-d15;
       border: 1px solid $color-primary-d15;
-    }
+    } */
 
     &[disabled] {
       background: $color-primary-disabled;
@@ -335,8 +336,10 @@
   }
 
   &__icon {
+    margin-left: 0.625rem;
     &--right {
-      margin-left: 10px;
+      margin-left: auto;
+      margin-right: 0.5rem;
     }
   }
 
@@ -364,7 +367,7 @@
       font-size: 18px;
       font-family: sans-serif;
       white-space: nowrap;
-      padding-left: 20px;
+      padding-left: 1.25rem;
     }
 
     &:hover {
@@ -378,12 +381,52 @@
     }
   }
 
+  &--text-icon {
+    width: 90px;
+    background: white;
+    border: 1px solid #c0c0c0;
+    border-radius: 0px;
+    color: $color-black;
+    text-indent: 10px;
+    font-family: 'Noto Sans KR';
+    font-size: 0.875rem;
+    font-weight: normal;
+    overflow: hidden;
+
+    &:hover {
+      border: 1px solid #c0c0c0;
+      background-color: $color-white;
+    }
+
+    &:focus {
+      border: 1px solid #2684ff;
+      background-color: $color-white;
+    }
+  }
+
+  &--icon-text {
+    width: 90px;
+    background: $gradient-primary;
+    border: none;
+    border-radius: 0px;
+    color: #ffffff;
+    font-family: 'Noto Sans KR';
+    font-size: 0.875rem;
+    font-weight: normal;
+    overflow: hidden;
+
+    &:hover {
+      border: none;
+      background: $gradient-primary;
+    }
+  }
+
   @media only screen and (max-width: $breakpoint-xxl) {
     height: 40px;
     padding: 0;
 
     &__content {
-      font-size: 16px;
+      font-size: var(--font-size-base);
     }
 
     &--icon {
@@ -404,6 +447,19 @@
 
       &:hover {
         max-width: 200px;
+      }
+    }
+  }
+
+  @media only screen and (min-width: $breakpoint-xxl) {
+    &--text-icon,
+    &--icon-text {
+      width: 6.875rem;
+    }
+
+    &__icon {
+      &--right {
+        margin-left: auto;
       }
     }
   }

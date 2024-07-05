@@ -54,9 +54,7 @@ const Dropdown: React.FunctionComponent<DropdownProps> = ({
   const dropdownClasses = classNames('dropdown', dropdownClassName);
 
   const onClickContent = () => {
-    if (hideOnClickMenu) {
-      setVisible(false);
-    }
+    setVisible(false);
   };
 
   return (
@@ -78,7 +76,7 @@ const Dropdown: React.FunctionComponent<DropdownProps> = ({
         className={`dropdown-elm ${isVisible && classActivated}`}
         onClick={(e) => {
           e.stopPropagation();
-          setVisible(true);
+          setVisible(!isVisible);
           if (onClickDropdown) {
             onClickDropdown();
           }

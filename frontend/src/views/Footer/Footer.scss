@@ -1,0 +1,68 @@
+@import '../../common/sass/variables';
+@import '../../common/sass/font.scss';
+
+.footer {
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  color: $color-grey;
+  margin-top: auto;
+  width: 100%;
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
+
+  &__left {
+    margin-left: 9.25%;
+
+    .responsive-svg {
+      width: 11.25rem;
+      height: 3.625rem;
+
+      image {
+        width: 11.25rem;
+        height: 3.625rem;
+      }
+    }
+  }
+
+  &__right {
+    margin-left: 2.5%;
+
+    &__contact {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-left: 0.625rem;
+        margin-right: 0.625rem;
+        width: 1px;
+        background-color: #707070;
+        align-self: stretch;
+      }
+    }
+
+    p {
+      font-size: 0.875rem;
+      font-family: 'Noto Sans KR';
+      font-weight: normal;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.875rem;
+
+    &__right {
+      margin-left: 7.5%;
+      align-items: flex-start;
+
+      &__contact {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+}

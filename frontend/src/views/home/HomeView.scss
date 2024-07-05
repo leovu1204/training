@@ -1,0 +1,205 @@
+@import '../../common/sass/variables';
+@import '../../common/sass/font';
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+
+  .banner-container {
+    position: fixed;
+    z-index: -10;
+    height: 100vh;
+    width: 100vw;
+
+    .banner-item {
+      height: 100vh;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 4s;
+      width: 100%;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .banner-item.active {
+      opacity: 1;
+      overflow: hidden;
+
+      img {
+        animation: scaleZ 4s;
+      }
+    }
+
+    .text-overlay {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 1;
+      opacity: 1;
+      animation: slideUp 1s forwards;
+      width: 90%;
+
+      h2 {
+        color: $color-white;
+        font-family: 'Noto Sans KR';
+        font-size: var(--font-size-xxl);
+        font-weight: 800;
+        margin: 0;
+      }
+
+      p {
+        margin-top: 40px;
+        color: #c4f7ff;
+        font-family: 'Noto Sans KR';
+        font-weight: normal;
+        font-size: var(--font-size-md);
+      }
+    }
+  }
+
+  .h-screen {
+    height: 100vh;
+  }
+
+  .context-container {
+    background-color: $color-white;
+
+    .home-body {
+      margin-top: 8.75rem;
+      margin-bottom: 10.125rem;
+      margin-left: 10%;
+      margin-right: 10%;
+
+      h2 {
+        font-family: 'S-Core Dream';
+        font-weight: 900;
+        font-size: var(--font-size-lg);
+      }
+
+      .announcement-container {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+
+        .announcement-title {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .announcement-card {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 30px;
+          gap: 30px;
+        }
+      }
+
+      .highlights-container {
+        display: flex;
+        margin-top: 140px;
+        margin-bottom: 162px;
+        gap: 30px;
+
+        .list-container {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          .list-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 24px;
+          }
+
+          .list-body {
+            border-top: 2px solid #0066c1;
+            border-bottom: 2px solid #0066c1;
+
+            .list-item {
+              display: flex;
+              align-items: center;
+              height: 60px;
+              justify-content: space-evenly;
+
+              .item-title {
+                display: flex;
+                align-items: center;
+                width: 90%;
+
+                .icon-span {
+                  display: inline-block;
+                  background-color: #3b4650;
+                  opacity: 0.88;
+                  width: 8px;
+                  height: 8px;
+
+                  margin-left: 20px;
+                  margin-right: 10px;
+                }
+
+                .title-span {
+                  font-size: 16px;
+                  font-family: 'Noto Sans KR';
+                  font-weight: 500;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 1;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  width: 75%;
+                }
+              }
+
+              &:hover {
+                cursor: pointer;
+                background-color: #f6f6f6;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  button {
+    background-color: $color-white;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@keyframes scaleZ {
+  0% {
+    transform: perspective(100px) translate3d(0, 0, 30px);
+  }
+
+  100% {
+    transform: perspective(100px) translate3d(0, 0, 0px);
+  }
+}
+
+@media only screen and (max-width: $breakpoint-xl) {
+  .announcement-card {
+    flex-direction: column;
+  }
+
+  .highlights-container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-xxl) {
+  .list-container {
+    min-width: 283px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-xl) {
+  .list-container {
+    max-width: none;
+  }
+}

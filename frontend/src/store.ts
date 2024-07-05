@@ -2,17 +2,21 @@ import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import storage from 'redux-persist/lib/storage';
 import { persistReducer, persistStore } from 'redux-persist';
 import commonSlice from './services/controllers/common/CommonSlice';
+import userSlice from './services/controllers/common/UserSlice';
+import postSlice from './services/controllers/common/PostSlice';
 
 const persistConfig = {
   key: 'root',
   storage,
-  blacklist: ['common'],
+  blacklist: ['common, user'],
 };
 
 const persistedReducer = persistReducer(
   persistConfig,
   combineReducers({
     common: commonSlice,
+    user: userSlice,
+    post: postSlice,
   }),
 );
 

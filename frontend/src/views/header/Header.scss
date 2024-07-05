@@ -1,0 +1,191 @@
+@import '../../common/sass/variables';
+@import '../../common/sass/font';
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.875rem 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  box-shadow: 0px 6px 18px rgb(0, 0, 0, 0.16);
+  background-color: $color-white;
+
+  .header-left {
+    display: flex;
+    margin-left: 9.25%;
+
+    .header-logo {
+      cursor: pointer;
+      width: 13.625rem;
+      height: 2.5rem;
+
+      image {
+        width: 13.625rem;
+        height: 2.5rem;
+      }
+    }
+
+    .header-img-text {
+      display: flex;
+      margin-left: 1em;
+      color: $color-white;
+      align-items: center;
+      font-family: 'Noto Sans KR';
+      font-size: var(--font-size-base);
+      font-weight: 700;
+    }
+  }
+
+  .default-link,
+  .active-link {
+    font-family: 'Noto Sans KR';
+    font-size: var(--font-size-base);
+  }
+
+  .default-link {
+    color: $color-black;
+  }
+
+  .active-link {
+    color: #0066c1;
+    font-weight: 700;
+  }
+
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10%;
+  }
+}
+
+.app-header.transparent {
+  background: transparent;
+  box-shadow: none;
+  color: $color-white;
+
+  .active-link,
+  .default-link {
+    color: $color-white;
+  }
+}
+
+.app-header.nav-fade-in {
+  animation: navFadeIn ease 0.5s forwards;
+}
+
+.app-header.show-menu {
+  background-color: $color-white;
+  color: $color-black;
+  display: flex;
+  align-items: flex-start;
+  position: fixed;
+  z-index: 1;
+  box-shadow: 0px 6px 18px rgb(0, 0, 0, 0.16);
+
+  .menu-container {
+    margin-bottom: 1.875rem;
+    align-self: flex-end;
+    color: $color-white;
+
+    .menu-icon {
+      padding-top: 10px;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+    text-align: right;
+  }
+
+  .default-link {
+    color: $color-black;
+  }
+
+  .active-link {
+    color: #0066c1;
+  }
+}
+
+.app-header.admin {
+  background-color: #155ca2;
+
+  .default-link {
+    color: #a4c6e3;
+  }
+
+  .active-link {
+    color: $color-white;
+  }
+
+  color: $color-white;
+}
+
+.app-header.user {
+  background: $gradient-secondary;
+
+  .default-link {
+    color: $color-white;
+  }
+
+  color: $color-white;
+}
+
+.hide-links {
+  background: $gradient-primary;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3.5rem;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: $breakpoint-xl) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .app-header {
+    .header-left {
+      .header-logo.small-screen {
+        width: 7.5rem;
+
+        image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes navFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

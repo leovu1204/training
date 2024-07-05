@@ -1,26 +1,33 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import DateTimeDisplay from '../DateTimeDisplay/DateTimeDisplay';
+
 import './Card.scss';
-import CardHeader from './components/CardHeader';
 
 export interface CardProps {
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   header?: React.ReactElement;
   footer?: React.ReactElement;
   title?: string;
+  content: string;
+  date: string;
   onClick?: () => void;
 }
 
 export type CardType = CardProps;
 
-const Card = ({ children, className, header, footer, title, onClick }: CardType): React.ReactElement => {
+const Card = ({ children, className, header, footer, title, content, date, onClick }: CardType): React.ReactElement => {
   const classes = classNames('card', className);
 
   return (
     <div onClick={onClick} className={classes}>
-      {title ? <CardHeader title={title} /> : header}
+      <div className="card-title">{title}</div>
+      <div className="card-content" dangerouslySetInnerHTML={{ __html: content }} />
+      <div className="card-date">
+        <DateTimeDisplay timestamp={date} />
+      </div>
       {children}
       {footer}
     </div>

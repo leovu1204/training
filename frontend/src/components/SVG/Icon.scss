@@ -4,10 +4,11 @@
   width: 16px;
   height: 16px;
   box-sizing: content-box;
-  fill: $color-ghost-white;
   pointer-events: none;
   transform: scale(1);
+  fill: black;
   flex-shrink: 0;
+  vertical-align: middle;
 
   &--rotate-45 {
     transform: rotate(45deg);
@@ -19,31 +20,31 @@
     transform: rotate(180deg);
   }
   &--xs {
-    width: 12px;
-    height: 12px;
+    width: 0.75rem;
+    height: 0.75rem;
   }
   &--sm {
-    width: 16px;
-    height: 16px;
+    width: 1rem;
+    height: 1rem;
   }
   &--md {
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
   }
   &--lg {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
   }
   &--xl {
-    width: 36px;
-    height: 36px;
+    width: 2rem;
+    height: 2rem;
   }
   &--xxl {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
-  @media only screen and (max-width: $breakpoint-xxl) {
+  /* @media only screen and (max-width: $breakpoint-xxl) {
     &--xs {
       width: 10px;
       height: 10px;
@@ -65,8 +66,8 @@
       height: 28px;
     }
     &--xxl {
-      width: 36px;
-      height: 36px;
+      width: 32px;
+      height: 32px;
     }
-  }
+  } */
 }

@@ -1,46 +1,93 @@
-/* Proxima Nova */
+/* S-Core Dream */
 @font-face {
-  font-family: 'Proxima Nova';
-  src: url('../assets/fonts/ProximaNova-Regular.otf') format('truetype');
+  font-family: 'S-Core Dream';
+  src: url('../assets/fonts/SCDream1.woff') format('woff');
   font-weight: normal;
 }
 @font-face {
-  font-family: 'Proxima Nova';
-  src: url('../assets/fonts/ProximaNova-Thin.otf') format('truetype');
+  font-family: 'S-Core Dream';
+  src: url('../assets/fonts/SCDream2.woff') format('woff');
   font-weight: 100;
 }
 @font-face {
-  font-family: 'Proxima Nova';
-  src: url('../assets/fonts/ProximaNova-Thin.otf') format('truetype');
+  font-family: 'S-Core Dream';
+  src: url('../assets/fonts/SCDream3.woff') format('woff');
   font-weight: 200;
 }
 @font-face {
-  font-family: 'Proxima Nova';
-  src: url('../assets/fonts/ProximaNova-Light.otf') format('truetype');
+  font-family: 'S-Core Dream';
+  src: url('../assets/fonts/SCDream4.woff') format('woff');
   font-weight: 300;
 }
 @font-face {
-  font-family: 'Proxima Nova';
-  src: url('../assets/fonts/ProximaNova-Medium.otf') format('truetype');
+  font-family: 'S-Core Dream';
+  src: url('../assets/fonts/SCDream5.woff') format('woff');
   font-weight: 500;
 }
 @font-face {
-  font-family: 'Proxima Nova';
-  src: url('../assets/fonts/ProximaNova-SemiBold.otf') format('truetype');
+  font-family: 'S-Core Dream';
+  src: url('../assets/fonts/SCDream6.woff') format('woff');
   font-weight: 600;
 }
 @font-face {
-  font-family: 'Proxima Nova';
-  src: url('../assets/fonts/ProximaNova-Bold.otf') format('truetype');
+  font-family: 'S-Core Dream';
+  src: url('../assets/fonts/SCDream7.woff') format('woff');
   font-weight: 700;
 }
 @font-face {
-  font-family: 'Proxima Nova';
-  src: url('../assets/fonts/ProximaNova-ExtraBold.otf') format('truetype');
+  font-family: 'S-Core Dream';
+  src: url('../assets/fonts/SCDream8.woff') format('woff');
   font-weight: 800;
 }
 @font-face {
-  font-family: 'Proxima Nova';
-  src: url('../assets/fonts/ProximaNova-Black.otf') format('truetype');
+  font-family: 'S-Core Dream';
+  src: url('../assets/fonts/SCDream9.woff') format('woff');
+  font-weight: 900;
+}
+
+/* Noto Sans KR */
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('../assets/fonts/NotoSansKR-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('../assets/fonts/NotoSansKR-Thin.ttf') format('truetype');
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('../assets/fonts/NotoSansKR-Thin.ttf') format('truetype');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('../assets/fonts/NotoSansKR-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('../assets/fonts/NotoSansKR-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('../assets/fonts/NotoSansKR-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('../assets/fonts/NotoSansKR-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('../assets/fonts/NotoSansKR-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('../assets/fonts/NotoSansKR-Black.ttf') format('truetype');
   font-weight: 900;
 }

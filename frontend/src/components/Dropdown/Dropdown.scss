@@ -1,23 +1,34 @@
 @import '../../common/sass/variables';
+@import '../../common/sass/font';
 
 .dropdown {
-  padding: var(--sp-3) 0;
-  font-size: 14px;
+  font-size: 0.875rem;
   background: $color-white;
   width: max-content;
   color: $color-black;
   box-shadow: $drop-shadow;
-  border-radius: 4px;
 
   &-elm {
     cursor: pointer;
+    width: fit-content;
+    height: fit-content;
   }
 
   &__item {
-    padding: var(--sp-4) var(--sp-6);
+    display: flex;
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+    font-family: 'Noto Sans KR';
+    font-size: var(--font-size-base);
+    font-weight: normal;
 
     &:hover {
-      background-color: $color-grey-l80;
+      background-color: #d4e9fc;
+    }
+
+    &.active {
+      background-color: #2684ff;
+      color: $color-white;
     }
   }
 }

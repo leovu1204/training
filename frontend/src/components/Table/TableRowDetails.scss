@@ -1,0 +1,154 @@
+@import '../../common/sass/variables';
+@import '../../common/sass/font';
+
+.table-detail {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    display: flex;
+    background-color: #d4e9fc;
+    align-items: center;
+    text-align: left;
+
+    p {
+      padding-top: 0.625rem;
+      padding-bottom: 0.625rem;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      font-family: 'S-Core Dream';
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+  }
+
+  &__pre-body {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__author,
+  &__date {
+    height: 3.125rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: #999999 1px solid;
+
+    .label {
+      width: 30%;
+      display: flex;
+
+      p {
+        font-family: 'S-Core Dream';
+        font-size: 0.875rem;
+        font-weight: 700;
+      }
+    }
+
+    a {
+      cursor: pointer;
+      text-decoration: underline;
+      color: #06c;
+    }
+
+    p,
+    a {
+      margin-left: 1.25rem;
+      font-family: 'S-Core Dream';
+      font-weight: 300;
+      font-size: 0.875rem;
+    }
+  }
+
+  &__description {
+    border-bottom: #999999 0.5px solid;
+    text-align: left;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    font-family: 'S-Core Dream';
+    font-weight: 500;
+    font-size: var(--font-size-sm);
+  }
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+
+  .buttons-left {
+    display: flex;
+    gap: 0.625rem;
+
+    .edit-button,
+    .delete-button {
+      cursor: pointer;
+      height: 2.5rem;
+      width: 3.75rem;
+      margin-top: 1.25rem;
+      border: 1px solid #c0c0c0;
+      font-family: 'S-Core Dream';
+      font-size: 0.875rem;
+      font-weight: 300;
+    }
+
+    .delete-button {
+      background: #d9d9d9;
+    }
+
+    .edit-button {
+      background: none;
+    }
+  }
+}
+
+.buttons-right {
+  display: flex;
+  gap: 0.625rem;
+  justify-content: flex-end;
+  margin-bottom: 55px;
+
+  .return-button,
+  .backward-button,
+  .forward-button {
+    cursor: pointer;
+    font-family: 'S-Core Dream';
+    font-size: 0.875rem;
+    font-weight: 300;
+    height: 2.5rem;
+    width: 5.5rem;
+    margin-top: 1.25rem;
+  }
+
+  .return-button {
+    color: $color-white;
+    border: none;
+    background: $gradient-primary;
+  }
+
+  .backward-button,
+  .forward-button {
+    background: #d9d9d9;
+    border: 1px solid #c0c0c0;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  .table-detail {
+    &__pre-body {
+      flex-direction: column;
+    }
+  }
+
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+
+    .buttons-left,
+    .buttons-right {
+      align-self: center;
+    }
+  }
+}

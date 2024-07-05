@@ -1,0 +1,223 @@
+@import '../../common/sass/variables.scss';
+
+.intro-view {
+  text-align: center;
+
+  &__top {
+    padding-top: 100px;
+  }
+
+  &__content {
+    margin-top: 6.25rem;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__span {
+      font-family: 'S-Core Dream';
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__paragraph-1 {
+    margin-top: 79px;
+    padding-left: 275px;
+    padding-right: 275px;
+
+    p {
+      font-family: 'S-Core Dream';
+      font-size: 1.063rem;
+      font-weight: 500;
+    }
+  }
+
+  &__paragraph-2 {
+    margin-top: 61px;
+    padding-left: 130px;
+    padding-right: 130px;
+
+    p {
+      font-family: 'S-Core Dream';
+      font-size: 1.063rem;
+      font-weight: 500;
+    }
+  }
+
+  &__paragraph-3 {
+    margin-top: 43px;
+
+    p {
+      font-family: 'S-Core Dream';
+      font-size: 1.063rem;
+      font-weight: 500;
+    }
+  }
+
+  &__paragraph-4 {
+    margin-top: 61px;
+
+    p {
+      font-family: 'S-Core Dream';
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: -0.6px;
+      color: #4d4d4d;
+    }
+  }
+
+  &__paragraph-5 {
+    margin-top: 100px;
+    margin-bottom: 75px;
+    margin-left: 8.125rem;
+    margin-right: 8.125rem;
+    border: 1px solid #cccccc;
+    min-height: 80px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-family: 'S-Core Dream';
+      font-size: 1.063rem;
+      font-weight: 500;
+      letter-spacing: -0.48px;
+      color: #4d4d4d;
+    }
+  }
+
+  &__image-1 {
+    margin-top: 61px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #cccccc;
+    min-height: 12.5rem;
+    margin-left: 8.75rem;
+    margin-right: 8.75rem;
+  }
+
+  &__image-2 {
+    margin-top: 61px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #cccccc;
+    min-height: 12.5rem;
+    margin-left: 8.75rem;
+    margin-right: 8.75rem;
+  }
+}
+
+.span-black,
+.span-blue {
+  font-family: 'S-Core Dream';
+  font-size: 1.063rem;
+  font-weight: 800;
+  letter-spacing: -0.51px;
+}
+
+.span-blue {
+  color: #0066c1;
+}
+
+.span-black {
+  color: #1d1d1d;
+}
+
+@media only screen and (max-width: $breakpoint-xl) {
+  .intro-view {
+    &__paragraph-1 {
+      padding-left: 135px;
+      padding-right: 135px;
+    }
+
+    &__image-1 {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    &__paragraph-2 {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    &__paragraph-3 {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &__paragraph-4 {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &__image-2 {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    &__paragraph-5 {
+      margin-left: 90px;
+      margin-right: 90px;
+      p {
+        padding: 30px 40px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  .intro-view {
+    &__logo {
+      &__span {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+
+    &__image-1 {
+      padding: 0;
+      margin: 0;
+      margin-top: 61px;
+      border: none;
+    }
+
+    &__paragraph-1 {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &__paragraph-2 {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    &__paragraph-3 {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &__paragraph-4 {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &__image-2 {
+      padding: 0;
+      margin: 0;
+      margin-top: 61px;
+      border: none;
+    }
+
+    &__paragraph-5 {
+      margin-left: 30px;
+      margin-right: 30px;
+      p {
+        padding: 30px 40px;
+      }
+    }
+  }
+}

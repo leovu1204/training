@@ -1,0 +1,393 @@
+@import '../../common/sass/variables';
+@import '../../common/sass/font';
+
+.customized-table {
+  tbody {
+    display: block;
+    overflow-y: auto;
+
+    .empty-body {
+      line-height: 50vh;
+    }
+
+    tr {
+      padding: 0.781rem 0px;
+
+      .title-column {
+        letter-spacing: -0.42px;
+        padding-left: 1.25rem;
+        p {
+          display: none;
+          color: #989898;
+          font-size: 0.813rem;
+          letter-spacing: -0.39px;
+        }
+      }
+    }
+  }
+
+  thead {
+    tr {
+      background-color: #d4e9fc;
+    }
+  }
+
+  tr {
+    border-bottom: 1px solid #d9d9d9;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+
+    th {
+      width: 100%;
+      height: 3.125rem;
+      text-align: center;
+      font-family: 'S-Core Dream';
+      font-size: 0.875rem;
+      font-weight: 800;
+    }
+
+    td {
+      position: relative;
+      border-left: none;
+      border-right: none;
+      text-align: center;
+      min-height: 3.125rem;
+      font-size: 0.875rem;
+      font-family: 'S-Core Dream';
+      font-weight: 300;
+      cursor: pointer;
+
+      input {
+        width: 1.25rem;
+        height: 1.25rem;
+        border: 0;
+      }
+
+      img {
+        max-height: 139px;
+        width: 80%;
+        object-fit: cover;
+      }
+
+      button {
+        font-size: var(--font-size-sm);
+        cursor: pointer;
+        background-color: $color-white;
+        border: 1px solid #c0c0c0;
+        width: 3.125rem;
+        height: 1.875rem;
+      }
+    }
+
+    th:first-child,
+    td:first-child {
+      width: 10%;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+      width: 60%;
+    }
+
+    td:nth-child(2) {
+      text-align: left;
+      padding: 0 10px;
+    }
+
+    th:nth-child(3),
+    td:nth-child(3),
+    th:nth-child(4),
+    td:nth-child(4) {
+      width: 15%;
+    }
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.75rem;
+    gap: 0.25rem;
+
+    .icon-nav {
+      display: flex;
+      gap: 0.25rem;
+
+      .button-nav {
+        cursor: pointer;
+        border: none;
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    .page-number {
+      display: flex;
+      gap: 0.25rem;
+
+      .number-button {
+        cursor: pointer;
+        font-size: var(--font-size-base);
+        background-color: $color-white;
+        border: 1px solid #cccccc;
+        width: 2rem;
+        height: 2rem;
+      }
+
+      .number-button.clicked {
+        background: $gradient-primary;
+        color: $color-white;
+      }
+    }
+
+    .admin-buttons {
+      display: flex;
+      gap: 0.5rem;
+      position: absolute;
+      right: 18%;
+
+      button {
+        height: 2.5rem;
+        min-width: 3.75rem;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &__edit,
+      &__delete {
+        border: 1px solid #c0c0c0;
+        font-family: 'Noto Sans KR';
+        font-weight: normal;
+        font-size: 0.875rem;
+      }
+
+      &__edit {
+        background-color: #ffffff;
+      }
+
+      &__delete {
+        background-color: #d9d9d9;
+      }
+
+      &__create {
+        width: 6.25rem;
+        color: $color-white;
+        background: $gradient-primary;
+        border: none;
+        font-family: 'Noto Sans KR';
+        font-weight: normal;
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #d9d9d9;
+    border-radius: 6px;
+  }
+}
+
+.customized-table.managerial {
+  thead {
+    tr {
+      background-color: #d4e9fc;
+
+      th:first-child {
+        width: 5%;
+      }
+
+      th:nth-child(2) {
+        width: 10%;
+      }
+
+      th:nth-child(3) {
+        width: 60%;
+      }
+
+      th:nth-child(4),
+      th:nth-child(5) {
+        width: 12.5%;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td:first-child {
+        width: 5%;
+        text-align: center;
+      }
+
+      td:nth-child(2) {
+        width: 10%;
+        text-align: center;
+      }
+
+      td:nth-child(3) {
+        width: 60%;
+        text-align: left;
+      }
+
+      td:nth-child(4),
+      td:nth-child(5) {
+        width: 12.5%;
+      }
+    }
+  }
+}
+
+.dialog {
+  border-radius: 0px;
+
+  .message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5.25rem;
+    font-family: 'Noto Sans KR';
+    font-weight: 700;
+    font-size: 0.938rem;
+  }
+
+  &__buttons {
+    display: flex;
+    width: 100%;
+
+    button {
+      cursor: pointer;
+      width: 100%;
+      height: 2.5rem;
+      border: none;
+      margin-top: 4.188rem;
+      font-family: 'Noto Sans KR';
+      font-weight: normal;
+      font-size: var(--font-size-base);
+    }
+
+    .cancel-button {
+      background-color: #d9d9d9;
+    }
+
+    .confirm-button {
+      background: $gradient-primary;
+      color: $color-white;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-xl) {
+  .customized-table {
+    margin-top: 3.5rem;
+
+    th:nth-child(3),
+    td:nth-child(3),
+    th:nth-child(4),
+    td:nth-child(4) {
+      display: none;
+    }
+
+    .pagination {
+      .admin-buttons {
+        margin-top: 75px;
+      }
+    }
+
+    tbody {
+      tr {
+        .title-column {
+          display: flex;
+          flex-direction: column;
+          gap: 1.25rem;
+          p {
+            display: block;
+          }
+        }
+      }
+    }
+
+    tr {
+      th:first-child,
+      td:first-child {
+        width: 8%;
+      }
+
+      th:nth-child(2),
+      td:nth-child(2) {
+        width: 92%;
+      }
+    }
+  }
+
+  .customized-table.managerial {
+    thead {
+      tr {
+        th:first-child {
+          width: 10%;
+        }
+
+        th:nth-child(2) {
+          width: 20%;
+        }
+
+        th:nth-child(3) {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        th:nth-child(4),
+        th:nth-child(5) {
+          display: none;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td:first-child {
+          width: 10%;
+        }
+
+        td:nth-child(2) {
+          width: 20%;
+        }
+
+        td:nth-child(3) {
+          width: 100%;
+          padding: 0 10px;
+          display: flex;
+        }
+
+        td:nth-child(4),
+        td:nth-child(5) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  .customized-table {
+    margin-top: 6.5rem;
+
+    tr {
+      th:first-child,
+      td:first-child {
+        width: 15%;
+      }
+
+      th:nth-child(2),
+      td:nth-child(2) {
+        width: 85%;
+      }
+    }
+  }
+}

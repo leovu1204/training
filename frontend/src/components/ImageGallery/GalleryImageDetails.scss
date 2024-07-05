@@ -1,0 +1,111 @@
+@import '../../common/sass/variables';
+@import '../../common/sass/font';
+
+.image-view {
+  display: flex;
+  flex-direction: column;
+
+  .item-wrapper {
+    display: flex;
+    gap: 2.5rem;
+
+    img {
+      width: 37.5rem;
+      height: 100%;
+    }
+
+    .item-body {
+      display: flex;
+      flex-direction: column;
+      border: none;
+      text-align: left;
+      min-width: 20rem;
+
+      &__title {
+        background-color: #d4e9fc;
+        min-height: 3.125rem;
+        max-height: 100%;
+        display: flex;
+        align-items: center;
+
+        p {
+          margin-top: 0.625rem;
+          margin-bottom: 0.625rem;
+          margin-left: 1.25rem;
+          font-family: 'Noto Sans KR';
+          font-size: 1.25rem;
+          font-weight: bold;
+        }
+      }
+
+      &__author,
+      &__link {
+        min-height: 3.125rem;
+        max-height: 100%;
+        display: flex;
+        align-items: center;
+        border-bottom: #999999 0.5px solid;
+
+        .label {
+          min-width: 25%;
+          display: flex;
+          align-items: center;
+
+          p {
+            font-family: 'Noto Sans KR';
+            font-size: 0.938rem;
+            font-weight: 700;
+          }
+        }
+
+        a {
+          cursor: pointer;
+          text-decoration: underline;
+          color: #06c;
+        }
+
+        p,
+        a {
+          margin-left: 1.25rem;
+          font-family: 'Noto Sans KR';
+          font-weight: normal;
+          font-size: 0.938rem;
+        }
+      }
+
+      &__content {
+        min-height: 18.75rem;
+        max-height: 100%;
+        border-bottom: #999999 0.5px solid;
+        margin-top: 0.625rem;
+        margin-bottom: 0.625rem;
+        margin-left: 1.25rem;
+        font-family: 'Noto Sans KR';
+        font-size: 0.938rem;
+        font-weight: normal;
+      }
+    }
+  }
+
+  button {
+    cursor: pointer;
+    height: 2.5rem;
+    width: 5.5rem;
+    margin-top: 1.25rem;
+    align-self: flex-end;
+    color: $color-white;
+    background: $gradient-primary;
+    border: none;
+    font-family: 'Noto Sans KR';
+    font-size: var(--font-size-sm);
+    font-weight: normal;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-xl) {
+  .image-view {
+    .item-wrapper {
+      flex-direction: column;
+    }
+  }
+}
